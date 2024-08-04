@@ -1,0 +1,36 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .editAvatar{
+    display: flex;
+    position: absolute;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 24;
+    width: 300px;
+  }
+  

@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.5",
+    "@mui/material": "^5.16.5",
     "axios": "^1.7.2",
+    "framer-motion": "^11.3.18",
     "mongoose": "^8.4.4",
     "next": "14.2.4",
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-toastify": "^10.0.5",
     "use-debounce": "^10.0.1"
   },
   "devDependencies": {

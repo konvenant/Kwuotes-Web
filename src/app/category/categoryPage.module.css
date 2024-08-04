@@ -1,0 +1,41 @@
+/* categoryPage.module.css */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .saveButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0070f3;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .categoriesList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .categoryItem {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .categoryItem input[type='checkbox'] {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,44 @@
+/* categoryItem.module.css */
+.container {
+    padding: 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #030336;;
+    color: white;
+  }
+  
+  .selected {
+    background-color: white; /* Highlight the selected category */
+     border: 1px solid #030336;
+     color: #030336;
+  }
+
+  .selected .quoteCount {
+    background-color: brown;
+    color: white;
+  }
+
+  .selected .categoryName{
+    color: #030336;
+  }
+  
+  .categoryName {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .quoteCount {
+    font-size: 14px;
+    color: #030336;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 4px;
+  }
+  

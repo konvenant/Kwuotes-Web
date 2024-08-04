@@ -1,0 +1,92 @@
+.container{
+    background-color: white;
+    padding: 16px;
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+}
+
+.heading{
+    color: var(--bg);
+    font-size: 2rem;
+}
+
+.subheading{
+    color: var(--bgSoft);
+}
+
+.categoryContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.quoteList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--bgSoft);
+    color: white;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .pagination span{
+    margin: 8px;
+  }
+
+
+  .notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg) 0%, var(--text) 100%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  .messageContainer {
+    max-width: 600px;
+    background: rgba(189, 116, 116, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .message {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+  }
+  
