@@ -129,6 +129,7 @@ const [quotes, setQuotes] = useState<Quote[]>([]);
         </Link>
       ))}
       
+      
       {quotes.length > 0 && <div className={styles.pagination}>
             <button
               onClick={() => {
