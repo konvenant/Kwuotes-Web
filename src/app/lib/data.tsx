@@ -4,15 +4,6 @@ import { MyQuote } from "./model";
 import { getMyQuoteById } from "./actions";
 
 
-const dummyCategories: CategoryToSave[] = [
-  { id: '1', name: 'Inspiration', quoteCount: 12, dateAdded: '2022-01-01', dateModified: '2022-01-01', username: 'user1' },
-  { id: '2', name: 'Life', quoteCount: 25, dateAdded: '2022-01-01', dateModified: '2022-01-01', username: 'user2' },
-  { id: '3', name: 'Motivation', quoteCount: 15, dateAdded: '2022-01-01', dateModified: '2022-01-01', username: 'user3' },
-  { id: '4', name: 'Love', quoteCount: 8, dateAdded: '2022-01-01', dateModified: '2022-01-01', username: 'user4' },
-  { id: '5', name: 'Wisdom', quoteCount: 20, dateAdded: '2022-01-01', dateModified: '2022-01-01', username: 'user5' },
-];
-
-
   export const authors: Author[] = [
     {
       _id: '76ISAUD3P5',

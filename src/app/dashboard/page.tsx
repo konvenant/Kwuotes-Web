@@ -11,16 +11,7 @@ import { getCategories } from '../lib/actions';
 import { useAuth } from '../../contexts/AuthContext';
 
 
-// Create a list of dummy categories
 
-// const categories: Category[] = [
-//   { name: 'wisdom', quoteCount: 23, isSelected: false, onClick: (name: string) => console.log(`${name} clicked`) },
-//   { name: 'Life', quoteCount: 11, isSelected: true, onClick: (name: string) => console.log(`${name} clicked`) },
-//   { name: 'Knowledge', quoteCount: 30, isSelected: false, onClick: (name: string) => console.log(`${name} clicked`) },
-//   { name: 'Motivation', quoteCount: 50, isSelected: false, onClick: (name: string) => console.log(`${name} clicked`) },
-//   { name: 'Happiness', quoteCount: 18, isSelected: false, onClick: (name: string) => console.log(`${name} clicked`) },
-  
-// ];
 const Home = () => {
 
   

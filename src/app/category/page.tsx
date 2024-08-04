@@ -46,7 +46,8 @@ const CategoryPage: React.FC = () => {
 
           
       } catch (err: any) {
-        setError(err.message || 'Failed to fetch categories');
+        setError('Failed to fetch categories');
+        console.log(err.message)
       } finally {
         setLoading(false);
       }
@@ -68,7 +69,8 @@ const CategoryPage: React.FC = () => {
             const newSelectedCategories = new Set(ids);
            setSelectedCategories(newSelectedCategories);
         } catch (err: any) {
-          setError(err.message || 'Failed to fetch categories');
+          setError('Failed to fetch categories');
+          console.log(err.message)
         } finally {
           setLoading(false);
         }
@@ -80,10 +82,42 @@ const CategoryPage: React.FC = () => {
     if (categories == null) {
       setModal(true)
     }
-  }, [modal]);
+  }, []);
 
 
+  const fetchCategoriesAgain = async () => {
+    setLoading(true);
+    setError(null);
 
+    try {
+      const response  = await axios.get('https://api.quotable.io/tags');
+        if(response.data != null){
+          console.log(response.data);
+          const theTags: Tag[] = response.data
+          const tags : CategoryToSave[] = theTags.map((cat : Tag)=>{
+             return {
+              id: cat._id,
+              name: cat.name,
+              quoteCount: cat.quoteCount,
+              dateAdded: cat.dateAdded,
+              dateModified: cat.dateModified
+             }
+          })
+          
+          setCategories(tags)
+
+          
+        }
+
+        
+    } catch (err: any) {
+      setError('Failed to fetch categories');
+      console.log(err.message)
+    } finally {
+      setLoading(false);
+    }
+
+  };
 
   
   const handleCheckboxChange = (id: string) => {
@@ -157,7 +191,15 @@ const CategoryPage: React.FC = () => {
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p>Error: {error}</p>
+        <StateModal
+         isOpen
+         message={error+" , try again"}
+         onClose={()=> {
+          setModal(false)
+          setError(null)
+          fetchCategoriesAgain()
+         }}
+         />
       ) : (
         <div className={styles.categoriesList}>
           {categories != null && categories.map((category) => (
