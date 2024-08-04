@@ -123,9 +123,11 @@ const CategoryPage: React.FC = () => {
       setLoading(true);
       setError(null);
 
-      const selectedCategoryObjects  = Array.from(selectedCategories).map((id) =>
-        categories.find((category) => category.id === id)
-      );
+      const selectedCategoryObjects: CategoryToSave[] = Array.from(selectedCategories)
+  .map((id) => categories.find((category) => category.id === id)?.id) // Use optional chaining
+  .filter((categoryId) => categoryId !== undefined) // Filter out undefined values
+  .map((categoryId) => categories.find((category) => category.id === categoryId)!); // Use non-null assertion after filtering
+
 
       console.log("MYCAT:" , selectedCategoryObjects);
         await saveCategories(selectedCategoryObjects, user.username);
